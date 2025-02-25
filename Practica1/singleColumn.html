@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Column Layout - Ejemplo</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: #344e41;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 1rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+      }
+
+      nav a:hover {
+        background-color: #a3b18a;
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        min-height: 80vh;
+      }
+
+      .article {
+        background-color: #f9f9f9;
+        padding: 2rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        background-color: #344e41;
+        color: white;
+        text-align: center;
+        padding: 1.5rem;
+        margin-top: auto;
+      }
+      @media (max-width: 768px) {
+        nav a {
+          display: block;
+          margin: 10px 0;
+        }
+
+        main {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Mi Sitio Web</h1>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#blog">Blog</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="article">
+        <h2>Artículo 1</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua...
+        </p>
+      </article>
+
+      <article class="article">
+        <h2>Artículo 2</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua...
+        </p>
+      </article>
+
+      <article class="article">
+        <h2>Noticias</h2>
+        <p>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat...
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>

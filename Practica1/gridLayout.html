@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout - Ejemplo</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background: #f5f5f5;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .grid-item {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .item-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .item-content {
+        padding: 1.5rem;
+      }
+
+      .item-price {
+        color: #27ae60;
+        font-size: 1.4rem;
+        margin: 10px 0;
+      }
+
+      .item-button {
+        background: #4a5759;
+        color: white;
+        padding: 10px 25px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        transition: background 0.3s ease;
+      }
+
+      .item-button:hover {
+        background: #9db4c0;
+      }
+
+      .grid-header {
+        text-align: center;
+        padding: 4rem 1rem;
+        background: #0b2545;
+        color: white;
+        margin-bottom: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        .grid-container {
+          grid-template-columns: 1fr;
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="grid-header">
+      <h1>Nuestra Colección</h1>
+      <p>Colección de productos.</p>
+    </header>
+
+    <div class="grid-container">
+      <div class="grid-item">
+        <img
+          src="https://picsum.photos/id/870/200/200?grayscale&blur=2?random=1"
+          alt="Producto 1"
+          class="item-image"
+        />
+        <div class="item-content">
+          <h3>Producto 1</h3>
+          <p class="item-price">200 Bs</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, a.
+          </p>
+          <button class="item-button">Añadir al carrito</button>
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <img
+          src="https://picsum.photos/200/200?grayscale&blur=1&random=2"
+          alt="Producto 2"
+          class="item-image"
+        />
+        <div class="item-content">
+          <h3>Producto 2</h3>
+          <p class="item-price">230 Bs</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <button class="item-button">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="grid-item">
+        <img
+          src="https://picsum.photos/200/200?grayscale&blur=1&random=3"
+          alt="Producto 3"
+          class="item-image"
+        />
+        <div class="item-content">
+          <h3>Producto 3</h3>
+          <p class="item-price">150 Bs</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero odit
+            rerum reprehenderit.
+          </p>
+          <button class="item-button">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="grid-item">
+        <img
+          src="https://picsum.photos/200/200?grayscale&blur=1&random=4"
+          alt="Producto 4"
+          class="item-image"
+        />
+        <div class="item-content">
+          <h3>Producto 4</h3>
+          <p class="item-price">200 Bs</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+            quia aliquid impedit quae commodi. Omnis?
+          </p>
+          <button class="item-button">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
